@@ -83,11 +83,12 @@ export function Home() {
             <></>
           ) : (
             <>
+              <WeatherEmoji weather={weatherData.weather[0].icon} />
+
               <p className="text-4xl text-center">{weatherData.name}</p>
               <div className="grid grid-cols-2 pt-10">
                 <p className="text-2xl text-left">{Math.round(weatherData.main.temp)}°F</p>
                 <p className="text-2xl text-right">{weatherData.weather[0].main}</p>
-                <WeatherEmoji weather={weatherData.weather[0].icon} />
               </div>
             </>
           )}
